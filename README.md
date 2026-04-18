@@ -1,3 +1,5 @@
+![Dashboard Preview](assets/my_screenshot.png)
+
 🚗 Auto Insurance Customer Analysis
 An end-to-end data analysis project examining 9,134 auto insurance customer records to identify renewal response drivers, customer lifetime value distribution, and segment profitability across sales channels and coverage tiers.
 
@@ -53,10 +55,12 @@ SELECT
     SUM(CASE WHEN response = 'Yes' THEN 1 ELSE 0 END) AS responded,
     ROUND(
         100.0 * SUM(CASE WHEN response = 'Yes' THEN 1 ELSE 0 END) / COUNT(*), 1
-    ) AS response_rate_pct
+    ) 
+AS response_rate_pct
 FROM auto_insurance
 GROUP BY sales_channel
 ORDER BY response_rate_pct DESC;
+
 *Queries cover GROUP BY aggregations, CASE WHEN banding, NULLIF for safe division, and percentile subqueries for high-value customer segmentation.*
 
 
