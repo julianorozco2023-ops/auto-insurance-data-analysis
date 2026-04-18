@@ -49,17 +49,8 @@ Sheet                        Description
 🗄️ SQL Highlights
 The workbook includes a SQL Reference sheet with queries equivalent to each pivot analysis. Example:
 sql-- Response rate by sales channel
-SELECT
-    sales_channel,
-    COUNT(*) AS total_customers,
-    SUM(CASE WHEN response = 'Yes' THEN 1 ELSE 0 END) AS responded,
-    ROUND(
-        100.0 * SUM(CASE WHEN response = 'Yes' THEN 1 ELSE 0 END) / COUNT(*), 1
-    ) 
-AS response_rate_pct
-FROM auto_insurance
-GROUP BY sales_channel
-ORDER BY response_rate_pct DESC;
+
+![SQL Ex](assests/screenshot_2.png)
 
 *Queries cover GROUP BY aggregations, CASE WHEN banding, NULLIF for safe division, and percentile subqueries for high-value customer segmentation.*
 
