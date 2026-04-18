@@ -4,7 +4,7 @@
 An end-to-end data analysis project examining 9,134 auto insurance customer records to identify renewal response drivers, customer lifetime value distribution, and segment profitability across sales channels and coverage tiers.
 
 
-🎯 Objectives
+Objectives
 What customer and policy characteristics are associated with higher renewal response rates?
 Which sales channels and coverage tiers produce the most valuable customers?
 How is Customer Lifetime Value (CLV) distributed across the portfolio, and what demographic factors correlate with it?
@@ -19,7 +19,7 @@ Period   Jan–Feb 2011 policy renewal snapshot
 *Key fields include: Customer Lifetime Value, Response (renewal Y/N), Sales Channel, Coverage, Monthly Premium Auto, Total Claim Amount, State, Policy Type, and more.*
 
 
-🔍 Key Findings
+Key Findings
 Response rate is just 14.3% overall — renewal campaigns have significant room for targeting improvement
 Premium coverage customers have ~2× the CLV of Basic coverage customers across all sales channels, representing a clear upsell opportunity
 The Web channel shows the best Premium-to-Claim ratio, suggesting it is the most cost-efficient acquisition channel despite lower volume
@@ -27,24 +27,21 @@ California drives the most portfolio value (3,150 customers, highest avg CLV), w
 The top 10% of customers by CLV (>$17K) represent a disproportionate share of total portfolio value and warrant dedicated retention focus
 
 
-📂 Workbook Overview
+Workbook Overview
 The Excel workbook contains 8 sheets:
 Sheet                        Description
-📋 Data Dictionary            Documents all 24 fields — data types, measurement scales,                                quality notes, and ambiguity flags
+Data Dictionary            Documents all 24 fields — data types, measurement scales,                                quality notes, and ambiguity flags
 
 📊 Raw Data (Sample)          First 500 rows with formatted currency, number, and date                                 fields 
 
 📈 Executive Summary          KPI cards and summary tables by sales channel and coverage                               tier
 
-🔄 Pivot — State × Policy     CLV and response rate cross-tabulated by State and Policy                                Type
+Pivot — State × Policy     CLV and response rate cross-tabulated by State and Policy                                Type
 
-🔄 Pivot — Segment Analysis   Profitability matrix by Sales Channel × Coverage,                                        including Premium-to-Claim Ratio
+Pivot — Segment Analysis   Profitability matrix by Sales Channel × Coverage,                                        including Premium-to-Claim Ratio
 
-🔄 Pivot — CLV Distribution   CLV banding, demographic breakdowns, and conditional                                     formatting
+Pivot — CLV Distribution   CLV banding, demographic breakdowns, and conditional                                     formatting
 🗄️ SQL Reference              Five SQL queries replicating each pivot analysis
-
-📝 Methodology                Assumptions, data quality findings, limitations, and                                     recommendations
-
 
 🗄️ SQL Highlights
 The workbook includes a SQL Reference sheet with queries equivalent to each pivot analysis. Example:
@@ -61,7 +58,7 @@ Microsoft Excel — pivot tables, formulas (AVERAGE, SUM, IF), conditional forma
 SQL — analytical queries for reproducibility and cross-validation
 
 
-📌 Data Quality Notes
+Data Quality Notes
 
 No missing values were found across all 24 columns
 $0 Income values are intentional — they correspond to Unemployed and Disabled customers, confirmed by cross-tabulation with EmploymentStatus
